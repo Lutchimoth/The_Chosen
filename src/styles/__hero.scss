@@ -1,0 +1,21 @@
+@use '_variaveis';
+
+.hero {
+    &__container {
+        &__img {
+            width: 100%;
+            margin-top: 84px;
+        }
+        &__text {
+            width: 100%;
+            padding: 4px 0;
+            text-align: center;
+            margin-top: -72px;
+        }
+    }
+    .ebac-logo {
+        margin-left: 40px;
+        margin-top: -90px;
+        border-radius: 40px;
+    }
+}

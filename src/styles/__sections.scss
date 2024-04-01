@@ -1,0 +1,93 @@
+@use '_variaveis';
+
+// main section 
+.main {
+    margin: 65px 60px 60px 40px;
+    display: flex;
+    &__container {
+        width: 50%;
+        .text {
+            text-align: justify;
+            line-height: 1.3rem;
+        }
+    }
+    &__image__container {
+        width: 50%;
+        img {
+            width: 670px;
+        }
+    }
+}
+
+// seasons section 
+.seasons {
+    display: flex;
+    flex-direction: column;
+    margin: 65px 40px 60px 40px;
+    .seasons__tabs {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-top: 1.5rem;
+        width: max-content;
+        &__button {
+            &:nth-child(1){
+                margin-left: 0;
+            }
+            cursor: pointer;
+            color: variaveis.$textColorPrimary;
+            background-color: transparent;
+            margin: 0 1vw;
+            padding-bottom: 5px;
+            font-size: 16px;
+            text-transform: uppercase;
+            border: none;
+            border-bottom: 5px solid rgba(0, 0, 0, 0);
+        }
+    }
+    .seasons__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5%;
+        margin-top: 42px;
+        &__item {
+            position: relative;
+            cursor: pointer;
+            a {
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 4px;
+                }
+            }
+            .episode-id {
+                position: absolute;
+                top: 10%;
+                margin-left: 8px;
+                padding: 10px;
+                &__number {
+                    text-transform: capitalize;
+                    font-size: 14px;
+                    letter-spacing: 1.2px;
+                }
+
+            }
+            .titles{
+                position: absolute;
+                text-align: start;
+                margin-left: 8px;
+                padding: 10px;
+                bottom: 10%;
+                font-size: 18px;
+                width: 100%;
+                .episode-name {
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    letter-spacing: 1.5px;
+                }
+            }
+        }
+    }
+}
