@@ -2,8 +2,9 @@
 
 // main section 
 .main {
-    margin: 65px 60px 60px 40px;
+    margin: 65px auto;
     display: flex;
+    width: 1280px;
     &__container {
         width: 50%;
         .text {
@@ -18,21 +19,36 @@
         }
     }
 }
-
+// fourth-season section 
+.fourth-season {
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &__trailer {
+            margin: 40px 0;
+        }
+    }
+}
 // seasons section 
 .seasons {
     display: flex;
     flex-direction: column;
-    margin: 65px 40px 60px 40px;
+    margin: 0 auto 65px;
+    width: 1280px;
     .seasons__tabs {
         display: flex;
+        margin: 1.5rem 0;
         justify-content: start;
         align-items: center;
-        margin-top: 1.5rem;
         width: max-content;
         &__button {
             &:nth-child(1){
                 margin-left: 0;
+            }
+            &--is-active {
+                border-bottom: 4px solid variaveis.$textColorSecundary;
             }
             cursor: pointer;
             color: variaveis.$textColorPrimary;
@@ -42,14 +58,30 @@
             font-size: 16px;
             text-transform: uppercase;
             border: none;
-            border-bottom: 5px solid rgba(0, 0, 0, 0);
+            border-bottom: 4px solid rgba(0, 0, 0, 0);
         }
     }
     .seasons__list {
-        display: grid;
+        display: none;
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5%;
         margin-top: 42px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0;
+        width: 1280px;
+        &--is-active {
+            display: grid;
+            animation: fadeIn 0.6s ease forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+            }
         &__item {
             position: relative;
             cursor: pointer;
@@ -91,3 +123,57 @@
         }
     }
 }
+
+// casting section 
+.casting {
+    .section-title {
+        padding-left: 40px;
+        margin-bottom: 18px;
+    }
+    .section-banner {
+        display: flex;
+        justify-content: center;
+        img {
+            width: 780px;
+        }
+    }
+    .casting__list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        }
+        
+        .casting__list__item {
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+        text-align: center;
+        
+        img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        
+        .bio {
+            h4, h5 {
+            margin: 0;
+            font-weight: bold;
+            }
+            
+            .char-name {
+            color: #333;
+            font-size: 18px;
+            }
+            
+            .actor-name {
+            color: #666;
+            font-size: 16px;
+            }
+        }
+        }
+    }
+
+    // faq section 
+    

@@ -2,6 +2,7 @@
 @use '_header';
 @use '_hero';
 @use '_sections';
+@use '_carousel';
 
 * {
     margin: 0;
@@ -14,8 +15,7 @@ body {
 }
 
 .header__container {
-    max-width: 1080px;
-    width: 100%;
+    width: 1280px;
     margin: 0 auto;
     height: 100%;
     display: flex;
