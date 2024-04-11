@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // funtions 
+    // functions 
     function removeActiveButton() {
         const buttons = document.querySelectorAll('[data-tab-button]');
 
@@ -45,5 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
         element.style.transform = 'translateX(0)';
     }
     
-    setTimeout(fadeInAndMoveIn, 2000); // Chama a função depois de 1 segundo
+    setTimeout(fadeInAndMoveIn, 2000);
+
+    
 });

@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
             nextBtn.classList.remove('hidden');
         }
         
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
+        dots.forEach(dot => dot.classList.remove('dot--is-active'));
+        dots[index].classList.add('dot--is-active');
     }
     
     function moveToSlide(newIndex) {

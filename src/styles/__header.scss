@@ -19,17 +19,37 @@
                 list-style: none;
                 &__item {
                 text-decoration: none;
-                &:nth-child(1), &:nth-child(2) {
-                    padding-right: 40px;
+                &:nth-child(1) {
+                    background-color: variaveis.$textColorSecundary;
+                    padding: 8px;
+                    &:hover {
+                        color: variaveis.$textColorSecundary;
+                        background-color: #FFF;
+                    }
                 }
-                &:nth-child(4) {
-                    padding-left: 40px;
+                &:nth-child(1), &:nth-child(2) {
+                    margin-right: 40px;
+                }
+                &:nth-child(3){
+                    transition: .2s linear;
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+                &:nth-child(4), &:nth-child(5) {
+                    margin-left: 40px;
                 }
                 &__link {
                     color: variaveis.$textColorPrimary;
                     text-decoration: none;
                     font-size: 16px;
-                    padding-bottom: 35px;
+                    transition: ease .2s;
+                    &:hover {
+                        color: variaveis.$textColorSecundary;
+                    }
+                    &--is-active {
+                        color: variaveis.$textColorSecundary;
+                    }
                     }
                 }
             }

@@ -1,19 +1,29 @@
 @use '_variaveis';
 
 .hero {
+    display: flex;
+    align-items: center;
+    padding-top: 84px;
     &__container {
         &__img {
             width: 100%;
-            margin-top: 84px;
+            height: 90vh;
         }
         &__text {
             width: 100%;
             padding: 4px 0;
             text-align: center;
             margin-top: -72px;
+
+            .subtitle {
+                font-size: 22px;
+                font-family: "Oswald", sans-serif;
+            }
         }
     }
     .ebac-logo {
+        width: 80px;
+        height: 80px;
         margin-left: 40px;
         margin-top: -90px;
         border-radius: 40px;

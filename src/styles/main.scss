@@ -8,21 +8,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
-
 body {
     background-color: variaveis.$backgroundColorPrimary;
 }
-
+section {
+    transition: all 0.5s ease-in-out;
+}
 .header__container {
     width: 1280px;
-    margin: 0 auto;
     height: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 // text styles 
 .colored-word {
     color: variaveis.$textColorSecundary;
