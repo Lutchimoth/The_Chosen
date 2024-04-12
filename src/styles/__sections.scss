@@ -53,6 +53,10 @@
     @media (max-width: 768px) {
         width: 768px;
     }
+
+    @media (max-width: 425px) {
+        width: 425px;
+    }
     &__container {
         display: flex;
         flex-direction: column;
@@ -196,6 +200,9 @@
     @media (max-width: 768px) {
         width: 768px;
     }
+    @media (max-width: 425px) {
+        width: 425px;
+    }
     .section-banner {
         display: flex;
         justify-content: center;
@@ -219,6 +226,9 @@
 
         @media (max-width: 768px) {
             width: 768px;
+        }
+        @media (max-width: 425px) {
+            width: 425px;
         }
         
         .title {
@@ -272,6 +282,9 @@
         
         @media (max-width: 768px) {
             width: 768px;
+        }
+        @media (max-width: 425px) {
+            width: 425px;
         }
         &__container {
             img {
