@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function (){
     function updateActiveLink() {
         sections.forEach(section => {
             const id = section.getAttribute('id');
-            const link = document.querySelector(`.header__nav__navbar__list__item__link[href="#${id}"]`);
+            const link = document.querySelector(`.header__nav__navbar__list__item__link[href="#${id}"]` - `.header__nav__navbar__list__item__link[href="#${fourth-season}"]`);
 
             if (link && isSectionInView(section)) {
                 // Remove a classe '--is-active' de todos os links

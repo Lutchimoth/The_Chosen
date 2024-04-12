@@ -6,17 +6,45 @@
     height: 84px;
     line-height: 23px;
     top: 0;
+
+    @media (max-width: 768px) {
+        width: 768px;
+    }
     
     box-shadow: 8px 13px 12px 3px rgb(0 0 0 / 35%);
     z-index: 99999;
     font-weight: 500;
     background-color: variaveis.$backgroundColorPrimary;
+
+    .header__container {
+        width: 1280px;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            width: 768px;
+        }
+    }
+
     .header__nav {
+        @media (max-width: 768px) {
+            margin: 0 auto;
+        }
+
         &__navbar {
             &__list {
                 display: flex;
                 align-items: center;
                 list-style: none;
+
+                @media (max-width: 768px) {
+                    width: fit-content;
+                    justify-content: center;
+                }
+                
                 &__item {
                 text-decoration: none;
                 &:nth-child(1) {
@@ -26,9 +54,18 @@
                         color: variaveis.$textColorSecundary;
                         background-color: #FFF;
                     }
+
                 }
                 &:nth-child(1), &:nth-child(2) {
                     margin-right: 40px;
+
+                    @media (max-width: 768px) {
+                        margin-right: 20px;
+                    }
+
+                    @media (max-width: 425px) {
+                        display: none;
+                    }
                 }
                 &:nth-child(3){
                     transition: .2s linear;
@@ -38,12 +75,24 @@
                 }
                 &:nth-child(4), &:nth-child(5) {
                     margin-left: 40px;
+
+                    @media (max-width: 768px) {
+                        margin-left: 20px;
+                    }
+
+                    @media (max-width: 425px) {
+                        display: none;
+                    }
                 }
-                &__link {
+                &__link, &__link-button {
                     color: variaveis.$textColorPrimary;
                     text-decoration: none;
                     font-size: 16px;
                     transition: ease .2s;
+
+                    @media (max-width: 768px) {
+                        font-size: 14px;
+                    }
                     &:hover {
                         color: variaveis.$textColorSecundary;
                     }
@@ -55,4 +104,5 @@
             }
         }
     }
+
 }

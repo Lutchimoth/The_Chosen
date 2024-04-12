@@ -16,14 +16,6 @@ body {
 section {
     transition: all 0.5s ease-in-out;
 }
-.header__container {
-    width: 1280px;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 // text styles 
 .colored-word {
     color: variaveis.$textColorSecundary;
@@ -32,17 +24,34 @@ section {
     color: variaveis.$textColorPrimary;
     font-weight: bold;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 18px;
+    }
 }
 
 .subtitle, .section-subtitle {
     color: variaveis.$textColorPrimary;
     font-weight: bold;
     text-transform: uppercase;
+
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+
 }
 
 .text {
     color: variaveis.$textColorSecundary;
     font-weight: 400;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .titles {
@@ -55,7 +64,6 @@ section {
         
     }
     .section-subtitle {
-        font-size: 18px;
         color: rgba(255, 255, 255, 0.438);
     }   
 }
